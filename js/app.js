@@ -203,26 +203,31 @@ while (counter < 4)//only 4 opportunities to guess correctly
   {
     alert('You guessed the number correctly! Good job!');
     num_correct++;
-    break;
+    counter = 4;
   }
   else if (num_guess > 4)
   {
-    num_guess = prompt('Your guess was too high.  Please guess another number.');
     counter++;
-    if (counter === 4)
+    if (counter === 3)
     {
       alert('You have used all of your attempts.  The correct number was 4.');
+    }
+    else
+    {
+      num_guess = prompt('Your guess was too high.  Please guess another number.');
     }
   }
   else if (num_guess < 4)
   {
-    num_guess = prompt('Your guess was too low.  Please guess another number.');
     counter++;
-    if (counter === 4)
+    if (counter === 3)
     {
       alert('You have used all of your attempts.  The correct number was 4.');
     }
-  }
+    else
+    {
+      num_guess = prompt('Your guess was too low.  Please guess another number.');
+    }
 }
 
 
@@ -244,21 +249,29 @@ while (attempt < 6)
       break;
     }
   }
+
   if (guessed_correct === true)
   {
     num_correct++;
     break;
   }
-  attempt++;
-  if (attempt === 6)
+
+  else 
   {
-    alert('You have run out of attempts');
-    alert('The correct guesses were: a, e, i, o, u.');
+    attempt++;
+    if (attempt === 6)
+    {
+      alert('You have run out of attempts');
+      alert('The correct guesses were: a, e, i, o, u.');
+    }
+    else
+    {
+      user_char = prompt('Please try another letter that is always a vowel:');
+    }
   }
 }
 
 
 //Closing Greeting
 //Update correct answers
-alert("Thanks for answering my questions, " + userName + ".");
-alert('You got ' + num_correct + ' questions correct out of 7.');
+alert("Thanks for answering my questions, " + userName + " . You got "  + num_correct +  " questions correct out of 7.");
