@@ -4,6 +4,8 @@
 let userName = prompt("Hello there! What is your name?");
 alert("Thanks for visiting my page, " + userName + ".");
 
+let num_correct = 0;
+
 //Question 1
 let userAnswer = prompt("Is my name Ryan?");
 let validAnswer = false;
@@ -16,12 +18,14 @@ while (validAnswer == false)
       console.log("That is correct.");
       alert("That is correct.");
       validAnswer = true;
+      num_correct++;
       break;
 
     case 'yes':
       console.log("That is correct.");
       alert("That is correct.");
       validAnswer = true;
+      num_correct++;
       break;
 
     case 'n':
@@ -68,12 +72,14 @@ while (validAnswer == false)
       console.log("That is correct.");
       alert("That is correct.");
       validAnswer = true;
+      num_correct++;
       break;
 
     case 'no':
       console.log("That is correct.");
       alert("That is correct.");
       validAnswer = true;
+      num_correct++;
       break;
 
     default:
@@ -96,12 +102,15 @@ while (validAnswer == false)
       console.log("That is correct.");
       alert("That is correct.");
       validAnswer = true;
+      num_correct++;
       break;
 
     case 'yes':
       console.log("That is correct.");
       alert("That is correct.");
       validAnswer = true;
+      num_correct++;
+
       break;
 
     case 'n':
@@ -136,12 +145,16 @@ while (validAnswer == false)
       console.log("That is correct.");
       alert("That is correct.");
       validAnswer = true;
+      num_correct++;
+
       break;
 
     case 'yes':
       console.log("That is correct.");
       alert("That is correct.");
       validAnswer = true;
+      num_correct++;
+
       break;
 
     case 'n':
@@ -188,12 +201,14 @@ while (validAnswer == false)
       console.log("That is correct.");
       alert("That is correct.");
       validAnswer = true;
+      num_correct++;
       break;
 
     case 'no':
       console.log("That is correct.");
       alert("That is correct.");
       validAnswer = true;
+      num_correct++;
       break;
 
     default:
@@ -204,5 +219,71 @@ while (validAnswer == false)
 }
 
 
+//Question 6, number guessing game
+let num_guess = prompt('For this next question, please guess a number.  You have four attempts at getting it correct.');
+let counter = 0;
+while (counter < 4)//only 4 opportunities to guess correctly
+{
+  if (num_guess === 4)
+  {
+    alert('You guessed the number correctly! Good job!');
+    num_correct++;
+    break;
+  }
+  else if (num_guess > 4)
+  {
+    num_guess = prompt('Your guess was too high.  Please guess another number.');
+    counter++;
+    if (counter === 4)
+    {
+      alert('You have used all of your attempts.  The correct number was 4.');
+    }
+  }
+  else if (num_guess < 4)
+  {
+    num_guess = prompt('Your guess was too low.  Please guess another number.');
+    counter++;
+    if (counter === 4)
+    {
+      alert('You have used all of your attempts.  The correct number was 4.');
+    }
+  }
+}
+
+
+
+//Question 7, vowel guessing game
+let vowels = ['a', 'e', 'i', 'o', 'u'];
+let user_char = prompt('Please enter a letter that is always a vowel:');
+let attempt = 0;
+let guessed_correct = false;
+while (attempt < 6)
+{
+  for (let i = 0; i < vowels.length; i++)
+  {
+    if (user_char === vowels[i])
+    {
+      alert('Good job! You guessed correctly!');
+      alert('The correct guesses were: a, e, i, o, u.');
+      guessed_correct = true;
+      break;
+    }
+  }
+  if (guessed_correct === true)
+  {
+    num_correct++;
+    break;
+  }
+  attempt++;
+  if (attempt === 6)
+  {
+    alert('You have run out of attempts');
+    alert('The correct guesses were: a, e, i, o, u.');
+  }
+}
+
+
 //Closing Greeting
+//Update correct answers
 alert("Thanks for answering my questions, " + userName + ".");
+alert('You got ' + num_correct + ' questions correct out of 7.');
