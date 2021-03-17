@@ -15,33 +15,28 @@ while (validAnswer == false)
   switch (userAnswer.toLowerCase() )
   {
     case 'y':
-      console.log("That is correct.");
       alert("That is correct.");
       validAnswer = true;
       num_correct++;
       break;
 
     case 'yes':
-      console.log("That is correct.");
       alert("That is correct.");
       validAnswer = true;
       num_correct++;
       break;
 
     case 'n':
-      console.log("That is incorrect.");
       alert("That is incorrect.");
       validAnswer = true;
       break;
 
     case 'no':
-      console.log("That is incorrect.");
       alert("That is incorrect.");
       validAnswer = true;
       break;
 
     default:
-      console.log("Please enter a yes or no answer.");
       alert("Please enter a yes or no answer.");
       userAnswer = prompt("Is my name Ryan?");
   }
@@ -57,33 +52,28 @@ while (validAnswer == false)
   switch (userAnswer.toLowerCase() )
   {
     case 'y':
-      console.log("That is incorrect.");
       alert("That is incorrect.");
       validAnswer = true;
       break;
 
     case 'yes':
-      console.log("That is incorrect.");
       alert("That is incorrect.");
       validAnswer = true;
       break;
 
     case 'n':
-      console.log("That is correct.");
       alert("That is correct.");
       validAnswer = true;
       num_correct++;
       break;
 
     case 'no':
-      console.log("That is correct.");
       alert("That is correct.");
       validAnswer = true;
       num_correct++;
       break;
 
     default:
-      console.log("Please enter a yes or no answer.");
       alert("Please enter a yes or no answer.");
       userAnswer = prompt("Have I graduated college yet?");
   }
@@ -99,14 +89,12 @@ while (validAnswer == false)
   switch (userAnswer.toLowerCase() )
   {
     case 'y':
-      console.log("That is correct.");
       alert("That is correct.");
       validAnswer = true;
       num_correct++;
       break;
 
     case 'yes':
-      console.log("That is correct.");
       alert("That is correct.");
       validAnswer = true;
       num_correct++;
@@ -114,19 +102,16 @@ while (validAnswer == false)
       break;
 
     case 'n':
-      console.log("That is incorrect.");
       alert("That is incorrect.");
       validAnswer = true;
       break;
 
     case 'no':
-      console.log("That is incorrect.");
       alert("That is incorrect.");
       validAnswer = true;
       break;
 
     default:
-      console.log("Please enter a yes or no answer.");
       alert("Please enter a yes or no answer.");
       userAnswer = prompt("Do I cook a mean lasagna?");
   }
@@ -142,7 +127,6 @@ while (validAnswer == false)
   switch (userAnswer.toLowerCase() )
   {
     case 'y':
-      console.log("That is correct.");
       alert("That is correct.");
       validAnswer = true;
       num_correct++;
@@ -150,7 +134,6 @@ while (validAnswer == false)
       break;
 
     case 'yes':
-      console.log("That is correct.");
       alert("That is correct.");
       validAnswer = true;
       num_correct++;
@@ -158,19 +141,16 @@ while (validAnswer == false)
       break;
 
     case 'n':
-      console.log("That is incorrect.");
       alert("That is incorrect.");
       validAnswer = true;
       break;
 
     case 'no':
-      console.log("That is incorrect.");
       alert("That is incorrect.");
       validAnswer = true;
       break;
 
     default:
-      console.log("Please enter a yes or no answer.");
       alert("Please enter a yes or no answer.");
       userAnswer = prompt("Am I having fun at Code Fellows?");
   }
@@ -186,33 +166,28 @@ while (validAnswer == false)
   switch (userAnswer.toLowerCase() )
   {
     case 'y':
-      console.log("That is incorrect.");
       alert("That is incorrect.");
       validAnswer = true;
       break;
 
     case 'yes':
-      console.log("That is incorrect.");
       alert("That is incorrect.");
       validAnswer = true;
       break;
 
     case 'n':
-      console.log("That is correct.");
       alert("That is correct.");
       validAnswer = true;
       num_correct++;
       break;
 
     case 'no':
-      console.log("That is correct.");
       alert("That is correct.");
       validAnswer = true;
       num_correct++;
       break;
 
     default:
-      console.log("Please enter a yes or no answer.");
       alert("Please enter a yes or no answer.");
       userAnswer = prompt("Do I enjoy running?");
   }
