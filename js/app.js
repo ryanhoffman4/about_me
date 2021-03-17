@@ -228,6 +228,7 @@ while (counter < 4)//only 4 opportunities to guess correctly
     {
       num_guess = prompt('Your guess was too low.  Please guess another number.');
     }
+  }
 }
 
 
@@ -270,7 +271,6 @@ while (attempt < 6)
     }
   }
 }
-
 
 //Closing Greeting
 //Update correct answers
