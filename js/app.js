@@ -196,19 +196,18 @@ while (validAnswer == false)
 
 //Question 6, number guessing game
 let num_guess = prompt('For this next question, please guess a number.  You have four attempts at getting it correct.');
-let counter = 0;
-while (counter < 4)//only 4 opportunities to guess correctly
+let counter = 4;
+while (counter > 0)//only 4 opportunities to guess correctly
 {
   if (num_guess === 4)
   {
     alert('You guessed the number correctly! Good job!');
     num_correct++;
-    counter = 4;
+    counter = 0;
   }
   else if (num_guess > 4)
   {
-    counter++;
-    if (counter === 3)
+    if (counter === 1)
     {
       alert('You have used all of your attempts.  The correct number was 4.');
     }
@@ -216,11 +215,11 @@ while (counter < 4)//only 4 opportunities to guess correctly
     {
       num_guess = prompt('Your guess was too high.  Please guess another number.');
     }
+    counter--;
   }
   else if (num_guess < 4)
   {
-    counter++;
-    if (counter === 3)
+    if (counter === 1)
     {
       alert('You have used all of your attempts.  The correct number was 4.');
     }
@@ -228,6 +227,7 @@ while (counter < 4)//only 4 opportunities to guess correctly
     {
       num_guess = prompt('Your guess was too low.  Please guess another number.');
     }
+    counter--;
   }
 }
 
